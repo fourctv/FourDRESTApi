@@ -1,0 +1,1 @@
+  // ----------------------------------------------------  // INITGetApplicationVersion : Returns Current Application Version  //  // Return:  //     $0 = current application version  //  // Assumptions:  //  //  //C_TEXT($0)$0:="2.17.10.03a"  // this must be updated for each new version....
