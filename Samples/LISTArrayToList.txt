@@ -1,0 +1,1 @@
+  // ----------------------------------------------------  // LISTArrayToList : Copy Array data to a 4D List  //  // Parameters:  //     $1: list name  //     $2: pointer to array with items to populate list  //  // Return:  //     $0 = true:  //  // Assumptions:  //  //C_TEXT($1)C_POINTER($2)  //--- locals  //--- codeARRAY TO LIST($2->;$1)

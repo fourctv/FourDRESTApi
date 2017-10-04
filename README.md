@@ -40,6 +40,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 RESTOWA ($1;$2;$3;$4;$5;$6) // Call RESTApi On Web Authentication
 
 ```
+*(code above is also found in the **Samples** directory)*
 
 The Component also requires a couple of methods be present in the host database, and set as *Shared by components and host database*.
 
@@ -55,18 +56,29 @@ You can find samples of each of the methods above in the repository's **Samples*
 
 The **users_...** methods are needed to authenticate users and set their credentials for your application.
 
-The **LIST...** methods are used by the component to access the host database's 4D Lists.
+The **LIST...** methods are used by the component to access 4D Lists in the host database.
 
 ## HTTP Services
-The Component makes the following **4DAction** request entry opints available:
+The Component makes the following **4DAction** request entry points available:
 
 * REST_GetApplicationVersion - returns the host application version
-* REST_Authenticate - authenticates a user & password
+* REST_Authenticate - authenticates a user & password, and enables the other entry points if user is validated
 * REST_GetRecords - returns a list of record data according to a given query and record columns
-* REST_LoadData - returns record data from the database
+* REST_LoadData - returns one record data from the database
 * REST_PostData - inserts, updates or deletes a record in the database
 * REST_Get4DList - returns items for a given 4D List
 * REST_GetListOf4DLists - returns a list of all 4D Lists in the database
 * REST_Update4DList - updates the items on a 4D List
 * REST_GetListOfTables - returns a list of all tables in the database
 * REST_GetFieldsInTable - returns a list of all field definitions on a given database table
+
+Documentation on each request can be found on the wiki.
+
+## Session Management and Security
+The component uses its own Session Management and does not depend on 4D's own session management, which can even be disabled in the database properties, if not used by your app.
+
+Except for the **REST_GetApplicationVersion** and **REST_Authenticate** requests, all other requests must include a **Session token** and a **payload hash**.
+
+The **Session token** is generated when user authenticates via the **REST_Authenticate** request. **REST_Authenticate** request sends back a JSON response that includes a **Session token** and other user information (options, groups, etc). That **Session token** must be included in any and all requests to the API.
+
+Each request must also include a **hash** code that is generated from the request payload and is validated by the **RESTOWA** method, during **On Web Authentication**. That will ensure any and all requests received by the components have not been tampered with. Code on the javascript side generates the **hash**, which is then validated on 4D side.
