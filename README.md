@@ -73,16 +73,16 @@ The **LIST...** methods are used by the component to access 4D Lists in the host
 ## HTTP Services
 The Component makes the following **4DAction** request entry points available:
 
-* **[REST_GetApplicationVersion](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetApplicationVersion-Request)** - returns the host application version
-* **REST_Authenticate** - authenticates a user & password, and enables the other entry points if user is validated
-* **REST_GetRecords** - returns a list of record data according to a given query and record columns
-* **REST_LoadData** - returns one record data from the database
-* **REST_PostData** - inserts, updates or deletes a record in the database
-* **REST_Get4DList** - returns items for a given 4D List
-* **REST_GetListOf4DLists** - returns a list of all 4D Lists in the database
-* **REST_Update4DList** - updates the items on a 4D List
-* **REST_GetListOfTables** - returns a list of all tables in the database
-* **REST_GetFieldsInTable** - returns a list of all field definitions on a given database table
+* **[REST_GetApplicationVersion](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetApplicationVersion)** - returns the host application version
+* **[REST_Authenticate](https://github.com/fourctv/FourDRESTApi/wiki/REST_Authenticate)** - authenticates a user & password, and enables the other entry points if user is validated
+* **[REST_GetRecords](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetRecords)** - returns a list of record data according to a given query and record columns
+* **[REST_LoadData](https://github.com/fourctv/FourDRESTApi/wiki/REST_LoadData)** - returns one record data from the database
+* **[REST_PostData](https://github.com/fourctv/FourDRESTApi/wiki/REST_PostData)** - inserts, updates or deletes a record in the database
+* **[REST_Get4DList](https://github.com/fourctv/FourDRESTApi/wiki/REST_Get4DList)** - returns items for a given 4D List
+* **[REST_GetListOf4DLists](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetListOf4DLists)** - returns a list of all 4D Lists in the database
+* **[REST_Update4DList](https://github.com/fourctv/FourDRESTApi/wiki/REST_Update4DList)** - updates the items on a 4D List
+* **[REST_GetListOfTables](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetListOfTables)** - returns a list of all tables in the database
+* **[REST_GetFieldsInTable](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetFieldsInTable)** - returns a list of all field definitions on a given database table
 
 Documentation on each request can be found on the wiki.
 
