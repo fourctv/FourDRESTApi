@@ -1,11 +1,11 @@
 # 4D RESTApi
 A 4D Component that provides a RESTlike CRUD API for any 4D database.
 
-This components adds a couple of HTTP service entry points to your 4D application. Simply drop the built version of the component into your database's Components folder and follow the instructions below to enable it on your application.
+This component adds a couple of HTTP service entry points to your 4D application. Simply drop the built version of the component into your database's Components folder and follow the instructions below to enable it on your application.
 
 Of course you need to enable and activate 4D Web Server on your application.
 
-This 4D Component has a companion [Angular Typescript](http://angular.io) library that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D library** can be found [here](https://github.com/fourctv/JS44D).
+This 4D Component has a companion <a href="http://angular.io" target="_blank">Angular Typescript</a> library that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D library** can be found <a href="https://github.com/fourctv/JS44D/" target="_blank">here</a>.
 
 # Table of Contents
 
@@ -20,7 +20,7 @@ If you do not have a script set in your **[On Web Authentication](https://github
 
 ```
   // ----------------------------------------------------
-  // On Web Athentication method 
+  // On Web Authentication method 
   //
   // Parameters:
   //     $1: URL
@@ -52,7 +52,7 @@ RESTOWA ($1;$2;$3;$4;$5;$6) // Call RESTApi On Web Authentication
 ```
 *(code above is also found in the **Samples** directory)*
 
-The Component also requires a couple of methods be present in the host database, and set as *Shared by components and host database*, so they can be acessed from the Component.
+The Component also requires a couple of additional methods be present in the host database, and set as *Shared by components and host database*, so they can be called from the Component.
 
 * **[INITGetApplicationVersion](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/INITGetApplicationVersion.txt)** - returns current application version
 * **[users_ValidateUser](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/users_ValidateUser.txt)** - authenticates a user and password
@@ -89,20 +89,20 @@ The component uses its own Session Management and does not depend on 4D's sessio
 
 Except for the **REST_GetApplicationVersion** and **REST_Authenticate** requests, all other requests must include a **Session token** and a **payload hash**.
 
-The **Session token** is generated when user authenticates via the **REST_Authenticate** request. **REST_Authenticate** request sends back a JSON response that includes a **Session token** and other user information (options, groups, etc). That **Session token** must be included in any and all requests to the API.
+The **Session token** is generated when user authenticates via the **REST_Authenticate** request. **REST_Authenticate** request sends back a JSON response that includes a **Session token** and other user information (options, groups, etc). That **Session token** must then be included in any and all requests to the API.
 
 Each request must also include a **hash** code that is generated from the request payload and is validated by the **RESTOWA** method, during **On Web Authentication**. That will ensure any and all requests received by the components have not been tampered with. Code on the javascript side generates the **hash**, which is then validated on 4D side.
 
 ## Companion JS44D Libraries
-This 4D Component has a companion javascript library that can be used as the middle man between Angula2 apps and a 4D backend.
+This 4D Component has a companion [Angular Typescript](http://angular.io) library that can be used as the middle man between Angular2 apps and a 4D backend.
 
 The **JS44D library** can be found [here](https://github.com/fourctv/JS44D). It is fully documented in that project.
 
-The **JS44D Library** includes a series Angular2 Typescript components and services that simply the development of web, desktop or mobile applications that interact with the **4D RESTApi Component**.
+The **JS44D Library** includes a series of Angular2 Typescript components and services that simplify the development of web, desktop or mobile applications that interact with the **4D RESTApi Component**.
 
-Among the services in the **JS44D Library** there is a **JSFourDModel**, which is a service that implements an interface between Angular apps and a 4D Database, via the use of Data Model classes that map to tables on 4D side.
+Among the services in the **JS44D Library** there is a **JSFourDModel** class, which is a service that implements an interface between Angular apps and a 4D Database, via the use of Data Model classes that map to Tables on 4D side.
 
-Following is a brief description of the Typescript Data Models. For a detailed view on how to use that, please look [here](https://github.com/fourctv/JS44D).
+Following is a brief description of the Typescript Data Models. For a detailed view on how to use that, please look <a href="https://github.com/fourctv/JS44D/" target="_blank">here</a>.
 
 ## JS44D Data Models
 One of the key things that enables, and eases, interfacing between Angular and 4D is the ability to map a 4D Database Structure to **JS44D Data Models**. **JS44D Data Models** are instances of the **JSFourDModel** class.
@@ -110,9 +110,11 @@ One of the key things that enables, and eases, interfacing between Angular and 4
 **4D RESTApi Component** includes a special method that can be used to generate **JSFourDModel** classes for each table on a 4D Structure. Method **REST_ExportDataModel** can be run from a host database and it'll present a popup for selecting a 4D Table, or all tables, and it'll generate the corresponding **JSFourDModel** class. A simple way to do it is to create a dummy new method, put a call to **REST_ExportDataModel** and run that method:
 
 
-![https://gyazo.com/7933411e4ecad26d5246a0d8b5e5f502](https://i.gyazo.com/7933411e4ecad26d5246a0d8b5e5f502.gif)
+![https://gyazo.com/7933411e4ecad26d5246a0d8b5e5f502](https://i.gyazo.com/7933411e4ecad26d5246a0d8b5e5f502.gif) &nbsp;&nbsp;&nbsp;&nbsp;
+![https://gyazo.com/25a22035544eb643f22e67726eb724c3](https://i.gyazo.com/25a22035544eb643f22e67726eb724c3.png)
 
-The Typescript class generated by that method looks something like this:
+The Typescript class generated by that method (for the table above) will look something like this:
+
 ```
 import { FourDModel } from '../../js44D/js44D/JSFourDModel';
 
@@ -175,12 +177,12 @@ export class Location extends FourDModel {
 }
 ```
 
-Now go check the wiki in this project for documentation on each HTTP Service provided by this Component.
+Now go check the [wiki here](https://github.com/fourctv/FourDRESTApi/wiki) in this project for documentation on each HTTP Service provided by this Component.
 
 # Contributors 
 
 [<img alt="Julio Carneiro" src="https://avatars1.githubusercontent.com/u/15777910?v=3&s=117" width="117">](https://github.com/fourctv) |
-:---: |:---: |
+:---: |
 [Julio Carneiro](https://github.com/fourctv) |
 
 
