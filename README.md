@@ -52,6 +52,8 @@ RESTOWA ($1;$2;$3;$4;$5;$6) // Call RESTApi On Web Authentication
 ```
 *(code above is also found in the **Samples** directory)*
 
+If you already have a On Web Authentication script, all you need is to add a call to **RESTOWA** (as above).
+
 The Component also requires a couple of additional methods be present in the host database, and set as *Shared by components and host database*, so they can be called from the Component.
 
 * **[INITGetApplicationVersion](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/INITGetApplicationVersion.txt)** - returns current application version
@@ -64,7 +66,7 @@ The Component also requires a couple of additional methods be present in the hos
 
 You can find samples of each of the methods above in the repository's **Samples** folder.
 
-The **users_...** methods are needed to authenticate users and set their credentials for your application.
+The **users_...** methods are needed to authenticate users to your web/mobile app and set their credentials for your application.
 
 The **LIST...** methods are used by the component to access 4D Lists in the host database.
 
