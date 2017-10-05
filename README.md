@@ -5,7 +5,7 @@ This component adds a couple of HTTP service entry points to your 4D application
 
 Of course you need to enable and activate 4D Web Server on your application.
 
-This 4D Component has a companion <a href="http://angular.io" target="_blank">Angular Typescript</a> library that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D library** can be found <a href="https://github.com/fourctv/JS44D/" target="_blank">here</a>.
+This 4D Component has a companion [Angular Typescript](http://angular.io) library that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D library** can be found [here](https://github.com/fourctv/JS44D/).
 
 # Table of Contents
 
@@ -102,7 +102,7 @@ The **JS44D Library** includes a series of Angular2 Typescript components and se
 
 Among the services in the **JS44D Library** there is a **JSFourDModel** class, which is a service that implements an interface between Angular apps and a 4D Database, via the use of Data Model classes that map to Tables on 4D side.
 
-Following is a brief description of the Typescript Data Models. For a detailed view on how to use that, please look <a href="https://github.com/fourctv/JS44D/" target="_blank">here</a>.
+Following is a brief description of the Typescript Data Models. For a detailed view on how to use that, please look [here](https://github.com/fourctv/JS44D/).
 
 ## JS44D Data Models
 One of the key things that enables, and eases, interfacing between Angular and 4D is the ability to map a 4D Database Structure to **JS44D Data Models**. **JS44D Data Models** are instances of the **JSFourDModel** class.
