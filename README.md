@@ -14,6 +14,7 @@ This 4D Component has a companion [Angular Typescript](http://angular.io) librar
 - [Session Management and Security](#session-management-and-security)
 - [Companion JS44D Libraries](#companion-js44d-libraries)
 - [JS44D Data Models](#js44d-data-models)
+- [Special Database Fields](#special-database-fields)
 
 ## Installation Instructions
 If you do not have a script set in your **[On Web Authentication](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/On%20Web%20Authentication.txt)** database method you'll have to add one that contains at least the following code, calling the component's method **RESTOWA**:
@@ -180,6 +181,19 @@ export class Location extends FourDModel {
 ```
 
 Now go check the [wiki here](https://github.com/fourctv/FourDRESTApi/wiki) in this project for documentation on each HTTP Service provided by this Component.
+
+## Special Database Fields
+
+**4D RESTApi** assumes your database has some special Fields in all (most) tables, and those fields get some special treatment on **REST_PostData** requests:
+
+1. **Primary Key field**: a field defined as Primary Key in each table is automatically populated on **inserts**, and cannot be modified on **updates**
+2. **CreationDate**: a field named as **CreationDate** is automatically populated on **inserts**, and cannot be modified on **updates**
+3. **UpdateDate** or **LastUpdateDate**: a field named as **UpdateDate** or **LastUpdateDate** is automatically populated on **updates**
+4. **TimeStamp**: a field named as **TimeStamp** is automatically populated on **inserts** or **updates**, and it will hold a special Time Stamp string with the following format: "*YYYY/MM/DD;HH:MM:SS;username;client IP address;web process name;current machine owner;current machine name*"
+
+You can change that behaviour, or change the special fields names by modifying the **REST_PostData** method.
+
+You can also enable/disable some special handling of the **TimeStamp** field, to enable additional validation on **updates**, where the **TimeStamp** value sent on an **update** request can be matched to the current value in the record to update. If values do not match the update will be rejected, on the basis that user might be trying to update a different instance of that record.
 
 # Contributors 
 
