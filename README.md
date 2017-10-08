@@ -193,7 +193,11 @@ Now go check the [wiki here](https://github.com/fourctv/FourDRESTApi/wiki) in th
 
 You can change that behaviour, or change the special fields names by modifying the **REST_PostData** method.
 
-You can also enable/disable some special handling of the **TimeStamp** field, to enable additional validation on **updates**, where the **TimeStamp** value sent on an **update** request can be matched to the current value in the record to update. If values do not match the update will be rejected, on the basis that user might be trying to update a different instance of that record.
+You can also enable/disable some special handling of the **TimeStamp** field, to enable additional validation on **updates**. The **TimeStamp** value sent on an **update** request can be matched to the current value in the record to be updated. If values do not match the update will be rejected, on the basis that user might be trying to update an older instance of that record. Validation code in **REST_PostData** method is initially disabled, but can be easily enabled by modifying a single line in that method:
+```
+If (($updateTimeStamp="") | ($updateTimeStamp=$recordTimeStamp) | True)  //  valid time stamp? `------ temporarily disable time stamp validation
+```
+*(somewhere around line # 160, simply remove `| true` from that statement and the additional validation will be enabled)*
 
 # Contributors 
 
