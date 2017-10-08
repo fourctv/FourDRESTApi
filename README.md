@@ -85,7 +85,7 @@ The Component makes the following **4DAction** request entry points available:
 * **[REST_GetListOfTables](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetListOfTables)** - returns a list of all tables in the database
 * **[REST_GetFieldsInTable](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetFieldsInTable)** - returns a list of all field definitions on a given database table
 
-Documentation on each request can be found on the wiki.
+Documentation on each request can be found on the [wiki](https://github.com/fourctv/FourDRESTApi/wiki).
 
 ## Session Management and Security
 The component uses its own Session Management and does not depend on 4D's session management, which can even be disabled in the database properties, if not used by your app.
