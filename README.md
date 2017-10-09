@@ -5,7 +5,7 @@ This component adds a couple of HTTP service entry points to your 4D application
 
 Of course you need to enable and activate 4D Web Server on your application.
 
-This 4D Component has a companion [Angular Typescript](http://angular.io) library that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D library** can be found [here](https://github.com/fourctv/JS44D/).
+This 4D Component has a companion [Angular Typescript](http://angular.io) library ([**JS44D LIbrary**](https://github.com/fourctv/JS44D/)) that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D library** and documentation can be found [here](https://github.com/fourctv/JS44D/).
 
 # Table of Contents
 
