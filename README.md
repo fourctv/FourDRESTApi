@@ -64,9 +64,10 @@ The Component also requires a couple of additional methods be present in the hos
 * **[users_ValidateUser](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/users_ValidateUser.txt)** - authenticates a user and password
 * **[users_GetUserOptions](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/users_GetUserOptions.txt)** - returns authenticated user options
 * **[users_GetUserGroups](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/users_GetUserGroups.txt)** - returns a list of Groups user belongs to
-* **[LISTGetListOfAllLists](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/LISTGetListOfAllLists.txt)** - returns a list of all 4D List names
-* **[LISTListToArray](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/LISTListToArray.txt)** - returns all items for a given 4D List
 * **[LISTArrayToList](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/LISTArrayToList.txt)** - updates the items of a given 4D List
+* **[LISTGetListOfAllLists](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/LISTGetListOfAllLists.txt)** - returns a list of all 4D List names _(only needed if you want to use the **FourDAdmin** app)_
+* **[LISTListToArray](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/LISTListToArray.txt)** - returns all items for a given 4D List _(only needed if you want to use the **FourDAdmin** app)_
+
 
 You can find samples of each of the methods above in the repository's **Samples** folder.
 
