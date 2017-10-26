@@ -1,5 +1,5 @@
 # 4D RESTApi
-A 4D Component that provides a RESTlike CRUD API for any 4D database.
+A 4D V16 Component that provides a RESTlike CRUD API for any 4D database.
 
 This component adds a couple of HTTP service entry points to your 4D application. Simply drop the built version of the component into your database's Components folder and follow the instructions below to enable it on your application.
 
@@ -17,6 +17,8 @@ This 4D Component has a companion [Angular Typescript](http://angular.io) librar
 - [Special Database Fields](#special-database-fields)
 
 ## Installation Instructions
+This is a 4D V16 Component, so it must be installed on a 4D V16 compatible database structure.
+
 If you do not have a script set in your **[On Web Authentication](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/On%20Web%20Authentication.txt)** database method you'll have to add one that contains at least the following code, calling the component's method **RESTOWA**:
 
 ```
