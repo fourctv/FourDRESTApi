@@ -1,5 +1,5 @@
 # 4D RESTApi
-A 4D V16 Component that provides a RESTlike CRUD API for any 4D database.
+A 4D V16 Component that provides a REST-like CRUD API for any 4D database.
 
 This component adds a couple of HTTP service entry points to your 4D application. Simply drop the built version of the component into your database's Components folder and follow the instructions below to enable it on your application.
 
