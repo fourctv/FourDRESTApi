@@ -26,4 +26,4 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
   //--- code
 
-RESTOWA ($1;$2;$3;$4;$5;$6) // Call RESTApi On Web Authentication
+$0:=RESTOWA ($1;$2;$3;$4;$5;$6) // Call RESTApi On Web Authentication
