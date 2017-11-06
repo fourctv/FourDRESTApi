@@ -9,6 +9,7 @@ This is a 4D V16 Component, so it must be installed on a 4D V16 compatible datab
 
 This 4D Component has a companion [Angular Typescript](http://angular.io) library ([**JS44D Library**](https://github.com/fourctv/JS44D/)) that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D Library** and documentation can be found [here](https://github.com/fourctv/JS44D/).
 
+And do not forget to look at additional, detailed, documentation on the [wiki pages](https://github.com/fourctv/FourDRESTApi/wiki).
 # Table of Contents
 
 - [Installation Instructions](#installation-instructions)
