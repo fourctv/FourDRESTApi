@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>4D Maintenance and Security Center Log</title>
+<style type="text/css">
+                    html
+                    {
+                        text-align: center;
+                    }
+                    body  
+                    { 
+                        background: #fff; 
+                        color: #333;
+                        text-align: left;
+                        font-size: 11pt;
+                        font-family: Verdana, Helvetica, sans-serif; 
+                        margin: 0px; 
+                        padding: 0px; 
+                    }
+                    a, a:visited 
+                    {
+                        color: #036;
+                    }
+                    h1 
+                    {
+                        color: #036;
+                        margin: 5px auto;
+                    }
+                    h2
+                    {
+                        font-size: small;
+                        font-weight: bold;
+                        color: #036;
+                        padding: 2px 10px;
+                        border: 1px solid #036;
+                        background-color: #eee;
+                    }
+                    h3
+                    {
+                        display: list-item;
+                        list-style-type: square;
+                        list-style-position: inside;
+                        margin: 0;
+                        padding-bottom: 3px;
+                        font-size: small;
+                        font-weight: normal;
+                    }
+                    table
+                    {
+                        text-align: left;
+                        border: 1px solid #036;
+                        width: 100%;
+                    }
+                    td, th
+                    {
+                        padding: 2px 10px;
+                        font-size: x-small;
+                    }
+                    #header
+                    {
+                        margin: 0 10px;
+                        text-align: center;
+                    }
+                    #header ul#menu
+                    {
+                        font-size: x-small;
+                        list-style-type: none;
+                    }
+                    #header ul#menu li
+                    {
+                        display: inline;
+                        padding: 5px 10px;
+                    }
+                    #contents
+                    {
+                        margin: 0 10px;
+                    }
+                    table#summary, table.move
+                    {
+                        color: #036;
+                    }
+                    table#summary tr td, table.move tr td
+                    {
+                        background-color: #eee;
+                    }
+                    table#summary tr td:first-child, table.move tr td:first-child 
+                    {
+                        font-weight: bold;
+                        width: 200px;
+                        background-color: #036;
+                        color: #fff;
+                        text-align: right;
+                    }
+					b.canceled
+					{
+						font-weight: bold;
+						color: forestgreen;
+					}
+                    .operations
+                    {
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .hidden
+                    {
+                        display: none;
+                    }
+                    .operation
+                    {
+                        display: block;
+                        margin: 0;
+                        margin-left: 20px;
+                    }
+                    a.ok, a.ok:visited, .ok
+                    {
+                        color: forestgreen;
+                    }
+                    a.error, a.error:visited 
+                    {
+                        color: #f00;
+                    }
+                    a.warning, a.warning:visited
+                    {
+                        color: #f4ae36; 
+                    }
+                    h3 b.ok
+                    {
+                        font-weight: normal;
+                    }
+                    ul.errorsAndWarnings
+                    {
+                        list-style-type: none;
+                        border: 1px dotted #036;
+                        margin: 0;
+                        padding: 2px 10px;
+                        font-size: x-small;
+                    }
+                    li.error
+                    {
+                        margin: 2px 0;
+                        border-left: 5px solid #f00;
+                        padding-left: 5px;
+                    }
+                    li.warning
+                    {
+                        margin: 2px 0;
+                        padding-left: 5px;
+                        border-left: 5px solid #f4ae36;
+                    }
+                </style>
+<script type="text/javascript">
+<!--
+                        
+                            function display(calque)
+                            { 
+                                if(document.getElementById(calque).className == "operations hidden")
+                                    document.getElementById(calque).className = "operations";
+                                else 
+                                    document.getElementById(calque).style.display = document.getElementById(calque).style.display == "none" ? "block" : "none";
+                            }
+                            
+                            function showAll()
+                            {
+                                var x = document.getElementsByTagName('div');
+                                for (i = 0 ; i < x.length ; i++)
+                                {
+                                    if(x[i].className == "operations hidden")
+                                       x[i].className = "operations";
+                                       
+                                    else if(x[i].className == "operation hidden")
+                                       x[i].className = "operation"; 
+                                    
+                                    if(x[i].className == "operations" || x[i].className == "operations" )
+                                        x[i].style.display = "block"; 
+                                }
+                                showErrorsOrWarnings('error');
+                                showErrorsOrWarnings('warning');
+                            }
+                            
+                            function hideAll()
+                            {
+                                var x = document.getElementsByTagName('div');
+                                for (i = 0 ; i < x.length ; i++)
+                                    if(x[i].className == "operations" || x[i].className == "operations")
+                                        x[i].style.display = "none"; 
+                                hideErrorsOrWarnings('error');
+                                hideErrorsOrWarnings('warning');
+                            }
+                            
+                            function showErrorsOrWarnings(errorsOrWarnings)
+                            {
+                                var x = document.getElementsByTagName('li');
+                                var y = '';
+                                for (i = 0 ; i < x.length ; i++)
+                                    if(x[i].className == errorsOrWarnings)
+                                    {
+                                        y = x[i].parentNode;
+                                        while(y.className == "errorsAndWarnings" || y.className == "operation" || y.className == "operations")
+                                        {
+                                            y.style.display = "block";
+                                            y = y.parentNode;
+                                        }
+                                    }
+                            }
+                            
+                            function hideErrorsOrWarnings(errorsOrWarnings)
+                            {
+                                var x = document.getElementsByTagName('li');
+                                for (i = 0 ; i < x.length ; i++)
+                                {
+                                    if(x[i].className == errorsOrWarnings)
+                                    {
+                                        x[i].parentNode.style.display = "none"; 
+                                    }
+                                }
+                            }
+                         
+                    --></script>
+</head>
+<body>
+<div id="header">
+<h1>REST_API</h1>
+<table id="summary">
+<tr>
+<td>Operation:</td><td>Build</td>
+</tr>
+<tr>
+<td>Structure file:</td><td>LappyHD:FourDRESTApi:REST_API.4dbase:REST_API.4DB</td>
+</tr>
+<tr>
+<td>Data file:</td><td></td>
+</tr>
+<tr>
+<td>OS: </td><td>Mac OS X (10.11.6)</td>
+</tr>
+<tr>
+<td>Started on: </td><td>2017-11-12T11:42:12-02:00</td>
+</tr>
+<tr>
+<td>Ended on: </td><td>2017-11-12T11:42:13-02:00</td>
+</tr>
+</table>
+<ul id="menu">
+<li>
+<a href="#" onclick="showAll();">Show all</a> / <a href="#" onclick="hideAll();">Hide all</a>
+</li>
+<li>
+<a href="#" onclick="showErrorsOrWarnings('error');">Show errors</a> / <a href="#" onclick="hideErrorsOrWarnings('error');">Hide errors</a>
+</li>
+<li>
+<a href="#" onclick="showErrorsOrWarnings('warning');">Show warnings</a> / <a href="#" onclick="hideErrorsOrWarnings('warning');">Hide warnings</a>
+</li>
+</ul>
+</div>
+<div id="contents">
+<!--Verify-->
+<h2>1. Building component [<a href="#N0x73d9a00N0x74fe090" onclick="display('N0x73d9a00N0x74fe090');" class="ok">OK</a>]</h2>
+<div id="N0x73d9a00N0x74fe090" class="operations hidden">
+<div class="operation">
+<h3>Start compilation [2017-11-12T11:42:12] [<b class="ok">OK</b>]</h3>
+</div>
+<div class="operation">
+<h3>Start copying files : LappyHD:FourDRESTApi:REST_API_Build:Components:REST_API.4dbase:REST_API.4DC [<b class="ok">OK</b>]</h3>
+</div>
+<div class="operation">
+<h3>End copying files : LappyHD:FourDRESTApi:REST_API_Build:Components:REST_API.4dbase:REST_API.4DC [<b class="ok">OK</b>]</h3>
+</div>
+<div class="operation">
+<h3>End compilation [2017-11-12T11:42:13] [<b class="ok">OK</b>]</h3>
+</div>
+</div>
+</div>
+</body>
+</html>
