@@ -9,7 +9,7 @@ This is a 4D V16 Component, so it must be installed on a 4D V16 compatible datab
 
 This 4D Component has a companion [Angular Typescript](http://angular.io) library ([**JS44D Library**](https://github.com/fourctv/JS44D/)) that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D Library** and documentation can be found [here](https://github.com/fourctv/JS44D/).
 
-And do not forget to look at additional, detailed, documentation on the [wiki pages](https://github.com/fourctv/FourDRESTApi/wiki).
+And do not forget to look at additional, detailed, documentation about this Component on the [wiki pages](https://github.com/fourctv/FourDRESTApi/wiki).
 
 # Table of Contents
 
@@ -58,7 +58,7 @@ $0:=RESTOWA ($1;$2;$3;$4;$5;$6) // Call RESTApi On Web Authentication
 ```
 *(code above is also found in the **Samples** directory)*
 
-If you already have a On Web Authentication script, all you need is to add a call to **RESTOWA** (as above).
+If you already have a On Web Authentication script, all you need to do is add a call to **RESTOWA** (as above).
 
 The Component also requires a couple of additional methods be present in the host database, and set as *Shared by components and host database*, so they can be called from the Component.
 
@@ -190,16 +190,16 @@ Now go check the [wiki here](https://github.com/fourctv/FourDRESTApi/wiki) in th
 
 ## Special Database Fields
 
-**4D RESTApi** assumes your database has some special Fields in all (most) tables, and those fields get some special treatment on **REST_PostData** requests:
+**4D RESTApi** assumes your database may have some special Fields in all (most) tables, and those fields get some special treatment on **REST_PostData** requests:
 
-1. **Primary Key field**: a field defined as Primary Key in each table is automatically populated on **inserts**, and cannot be modified on **updates**
+1. **Primary Key field**: a field defined as Primary Key in each table is automatically populated on **inserts** (if it is a longint type), and cannot be modified on **updates**
 2. **CreationDate**: a field named as **CreationDate** is automatically populated on **inserts**, and cannot be modified on **updates**
 3. **UpdateDate** or **LastUpdateDate**: a field named as **UpdateDate** or **LastUpdateDate** is automatically populated on **updates**
 4. **TimeStamp**: a field named as **TimeStamp** is automatically populated on **inserts** or **updates**, and it will hold a special Time Stamp string with the following format: "*YYYY/MM/DD;HH:MM:SS;username;client IP address;web process name;current machine owner;current machine name*"
 
 You can change that behaviour, or change the special fields names by modifying the **REST_PostData** method.
 
-You can also enable/disable some special handling of the **TimeStamp** field, to enable additional validation on **updates**. The **TimeStamp** value sent on an **update** request can be matched to the current value in the record to be updated. If values do not match the update will be rejected, on the basis that user might be trying to update an older instance of that record. Validation code in **REST_PostData** method is initially disabled, but can be easily enabled by modifying a single line in that method:
+You can also enable/disable some special handling of the **TimeStamp** field, to enable additional validation on **updates**. The **TimeStamp** value sent on an **update** request can be matched to the current value in the record to be updated. If values do not match the update will be rejected, on the basis that user might be trying to update an older version of that record. Validation code in **REST_PostData** method is initially disabled, but can be easily enabled by modifying a single line in that method:
 ```
 If (($updateTimeStamp="") | ($updateTimeStamp=$recordTimeStamp) | True)  //  valid time stamp? `------ temporarily disable time stamp validation
 ```
