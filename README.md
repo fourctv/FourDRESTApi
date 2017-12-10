@@ -71,7 +71,7 @@ The Component also requires a couple of additional methods be present in the hos
 * **[LISTListToArray](https://github.com/fourctv/FourDRESTApi/blob/master/Samples/LISTListToArray.txt)** - returns all items for a given 4D List _(only needed if you want to use the **FourDAdmin** app)_
 
 
-You can find samples of each of the methods above in the repository's **Samples** folder.
+You can find samples of each of the methods above in the repository's **Samples** folder. In that folder you can also find a **Samples Database**, which is a 4D Database with those same methods. You can use that to copy over the sample methods accross two 4D instances. (_easier than creating and importing each method_)
 
 The **users_...** methods are needed to authenticate users to your web/mobile app and set their credentials for your application.
 
