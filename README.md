@@ -77,6 +77,8 @@ The **users_...** methods are needed to authenticate users to your web/mobile ap
 
 The **LIST...** methods are used by the component to access 4D Lists in the host database.
 
+There is a step by step procedure to get started with the **RESTApi** component at this [wiki page.](https://github.com/fourctv/JS44D/wiki/Let's-Get-Started) That page will instruct you how to get going on the 4D and Angular sides.
+
 ## HTTP Services
 The Component makes the following **4DAction** request entry points available:
 
