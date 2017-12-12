@@ -80,7 +80,7 @@ The **LIST...** methods are used by the component to access 4D Lists in the host
 ## HTTP Services
 The Component makes the following **4DAction** request entry points available:
 
-* **[REST_GetVersion](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetAVersion)** - returns the RESTApi library version
+* **[REST_GetVersion](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetVersion)** - returns the RESTApi library version
 * **[REST_GetApplicationVersion](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetApplicationVersion)** - returns the host application version
 * **[REST_Authenticate](https://github.com/fourctv/FourDRESTApi/wiki/REST_Authenticate)** - authenticates a user & password, and enables the other entry points if user is validated
 * **[REST_GetRecords](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetRecords)** - returns a list of record data according to a given query and record columns
