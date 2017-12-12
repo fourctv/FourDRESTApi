@@ -115,7 +115,7 @@ Among the services in the **JS44D Library** there is a **FourDModel** class, whi
 Following is a brief description of the Typescript Data Models. For a detailed view on how to use that, please look [here](https://github.com/fourctv/JS44D/).
 
 ## JS44D Data Models
-One of the key things that enables, and eases, interfacing between Angular and 4D is the ability to map a 4D Database Structure to **JS44D Data Models**. **JS44D Data Models** are instances of the **FourDModel** class.
+One of the key things that enables, and eases, interfacing between Angular and 4D is the ability to map a 4D Database Structure to **[JS44D Data Models](https://github.com/fourctv/JS44D/wiki/Data-Modelling)**. **[JS44D Data Models](https://github.com/fourctv/JS44D/wiki/Data-Modelling)** are instances of the **FourDModel** class.
 
 **4D RESTApi Component** includes a special method that can be used to generate **FourDModel** classes for each table on a 4D Structure. Method **REST_ExportDataModel** can be run from a host database and it'll present a popup for selecting a 4D Table, or all tables, and it'll generate the corresponding **FourDModel** class. A simple way to do it is to create a dummy new method, put a call to **REST_ExportDataModel** and run that method:
 
