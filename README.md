@@ -9,6 +9,8 @@ This is a 4D V16 Component, so it must be installed on a 4D V16 compatible datab
 
 This 4D Component has a companion [Angular Typescript](http://angular.io) library ([**JS44D Library**](https://github.com/fourctv/JS44D/)) that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D Library** and documentation can be found [here](https://github.com/fourctv/JS44D/).
 
+There is a step by step procedure to get started with the **RESTApi** component at this [wiki page.](https://github.com/fourctv/JS44D/wiki/Let's-Get-Started) That page will instruct you on how to get going on the 4D and Angular sides.
+
 And do not forget to look at additional, detailed, documentation about this Component on the [wiki pages](https://github.com/fourctv/FourDRESTApi/wiki).
 
 # Table of Contents
@@ -76,8 +78,6 @@ You can find samples of each of the methods above in the repository's **Samples*
 The **users_...** methods are needed to authenticate users to your web/mobile app and set their credentials for your application.
 
 The **LIST...** methods are used by the component to access 4D Lists in the host database.
-
-There is a step by step procedure to get started with the **RESTApi** component at this [wiki page.](https://github.com/fourctv/JS44D/wiki/Let's-Get-Started) That page will instruct you how to get going on the 4D and Angular sides.
 
 ## HTTP Services
 The Component makes the following **4DAction** request entry points available:
