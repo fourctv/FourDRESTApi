@@ -3,11 +3,11 @@ A 4D V17.0 BETA Component that provides a REST-like CRUD API for any 4D database
 
 **This version has been modified to use Collections and ORDA as per 4D V17.0 BETA. USE FOR TESTING AND EVALUATION ONLY**
 
-This component adds a couple of HTTP service entry points to your 4D application. Simply drop the built version of the component into your database's Components folder and follow the instructions below to enable it on your application.
+This component adds a couple of HTTP service entry points to your 4D application. The built version in this branch has NOT been updated, it is still a V16 build, so if you want to try this component use the source version at the branch's root.
 
 Of course you need to enable and activate 4D Web Server on your application.
 
-This is a 4D V16 Component, so it must be installed on a 4D V16 compatible database structure.
+This is a 4D V17.0 Component, so it must be installed on a 4D V17.0 compatible database structure.
 
 This 4D Component has a companion [Angular Typescript](http://angular.io) library ([**JS44D Library**](https://github.com/fourctv/JS44D/)) that can be used as the middle man between Angular2 apps and a 4D backend. The **JS44D Library** and documentation can be found [here](https://github.com/fourctv/JS44D/).
 
