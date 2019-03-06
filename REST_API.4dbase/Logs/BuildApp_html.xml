@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?xml-stylesheet type="text/xsl" href="LogStyleSheet.xsl"?>
-<verifylog operation="Build" name="REST_API" structure="LappyHD:Users:jcarneiro:Documents:GitHub:FourDRESTApi:REST_API.4dbase:REST_API.4DB" data="" os="macOS Version 10.13.6 (Build 17G4015)">
-<start_timer time="2018-12-28T15:20:04-02:00"/>
-<stop_timer time="2018-12-28T15:20:06-02:00" success="true" user_canceled="false"/>
+<verifylog operation="Build" name="REST_API" structure="LappyHD:Users:jcarneiro:Documents:GitHub:FourDRESTApi:REST_API.4dbase:REST_API.4DB" data="" os="macOS Version 10.13.6 (Build 17G5019)">
+<start_timer time="2019-03-06T15:20:12-03:00"/>
+<stop_timer time="2019-03-06T15:20:14-03:00" success="true" user_canceled="false"/>
 <step title="Building component">
-<step title="Start compilation [2018-12-28T15:20:04]"></step>
+<step title="Start compilation [2019-03-06T15:20:12]"></step>
 <step title="Start copying files : LappyHD:Users:jcarneiro:Documents:GitHub:FourDRESTApi:REST_API_Build:Components:REST_API.4dbase:REST_API.4DC"></step>
 <step title="End copying files : LappyHD:Users:jcarneiro:Documents:GitHub:FourDRESTApi:REST_API_Build:Components:REST_API.4dbase:REST_API.4DC"></step>
-<step title="End compilation [2018-12-28T15:20:06]"></step>
+<step title="End compilation [2019-03-06T15:20:14]"></step>
 </step>
 </verifylog>
