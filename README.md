@@ -88,6 +88,9 @@ The Component makes the following **4DAction** request entry points available:
 * **[REST_GetRecords](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetRecords)** - returns a list of record data according to a given query and record columns
 * **[REST_LoadData](https://github.com/fourctv/FourDRESTApi/wiki/REST_LoadData)** - returns one record data from the database
 * **[REST_PostData](https://github.com/fourctv/FourDRESTApi/wiki/REST_PostData)** - inserts, updates or deletes a record in the database
+* **[REST_BulkDelete](https://github.com/fourctv/FourDRESTApi/wiki/REST_BulkDelete)** - deletes a selection of records from the database that match a given query
+* **[REST_BulkUpdate](https://github.com/fourctv/FourDRESTApi/wiki/REST_BulkUpdate)** - updates a list of records in the database
+* **[REST_CountRecords](https://github.com/fourctv/FourDRESTApi/wiki/REST_Countrecords)** - returns the number of records  matching a given query
 * **[REST_GetValues](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetValues)** - allows for executing statements and methods on 4D side to obtain calculated values
 * **[REST_Get4DList](https://github.com/fourctv/FourDRESTApi/wiki/REST_Get4DList)** - returns items for a given 4D List
 * **[REST_GetListOf4DLists](https://github.com/fourctv/FourDRESTApi/wiki/REST_GetListOf4DLists)** - returns a list of all 4D Lists in the database
